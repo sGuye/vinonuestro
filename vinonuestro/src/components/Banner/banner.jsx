@@ -10,6 +10,7 @@ function Banner() {
         <h1>Vino Nuestro</h1>
         <p>Welcome to Vino Nuestro, your go-to place for exquisite wines!</p>
       </div>
+      <button>Descubrir vino para mi</button>
     </>
   )
 }
