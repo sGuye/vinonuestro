@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './banner.module.css'
+
 
 function AboutYou() {
   const [count, setCount] = useState(0)
@@ -32,6 +32,9 @@ function AboutYou() {
         <button> momento personal </button>
         </div>
         
+
+
+        <button> Ver Recomendaciones </button>
       </div>
     </>
   )
