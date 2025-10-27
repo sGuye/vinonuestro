@@ -1,0 +1,38 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(243, 242, 239);
+  padding: 11rem 2rem 8rem;
+}
+
+.bannerTitle {
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+
+.bannerSubtitle {
+  font-size: 2.5rem;
+  font-weight: 200;
+  margin: 3rem 0 .5rem 0;
+}
+
+.bannerText {
+  margin: 1rem;
+  font-size: 1.2rem ;
+  font-weight: 100;
+}
+
+.bannerButton {
+  font-size: 1.3rem;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  width: 35rem;
+  background-color: var(--grey);
+  border: none;
+  border-radius: .5rem;
+  color: var(--white);
+}

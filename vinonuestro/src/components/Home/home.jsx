@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./home.module.css";
 import Banner from "../Banner/banner";
-import Catalog from "../Catalog/catalog";
+import Explore from "../Explore/explore";
 
 function Home() {
   const [count, setCount] = useState(0);
@@ -9,7 +9,7 @@ function Home() {
   return (
     <div>
       <Banner />
-      <Catalog />
+      <Explore />
     </div>
   );
 }
