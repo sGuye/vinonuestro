@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import styles from './favorites.module.css'
+import styles from './profile.module.css'
 
-function Favorites() {
+function Profile() {
   const [favorites, setFavorites] = useState([
     { id: 1, name: 'Malbec Reserva', price: '$850' },
     { id: 2, name: 'Chardonnay Premium', price: '$650' }
@@ -29,7 +29,7 @@ function Favorites() {
   };
 
   return (
-    <div className={styles.favoriteContainer}>
+    <div className={styles.profileContainer}>
       <div className={styles.header}>
         <h1 className={styles.title}>Mi perfil</h1>
         <div className={styles.profileIcon}>👤</div>
@@ -95,4 +95,4 @@ function Favorites() {
   )
 }
 
-export default Favorites
+export default Profile

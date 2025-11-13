@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  position: fixed;
+  position: static; /* CAMBIO: de fixed a static */
   width: 100%;
   height: 3.35rem;
   top: 0;

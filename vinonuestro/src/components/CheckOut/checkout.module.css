@@ -1,0 +1,217 @@
+.checkoutContainer {
+    display: flex;
+    flex-direction: column;
+  background-color: #111;
+  color: #fff;
+  min-height: 100vh;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin: 0 0 2rem 0;
+  font-weight: 400;
+}
+
+/* Cart Item */
+.cartItem {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  border: 1px solid #333;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.wineImage {
+  width: 80px;
+  height: 120px;
+  background-color: #333;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.wineDetails {
+  flex: 1;
+}
+
+.wineName {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.winery {
+  margin: 0.25rem 0;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.price {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.quantityControl {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.quantityControl button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantityControl button:hover {
+  background-color: #333;
+  border-radius: 4px;
+}
+
+.quantityControl input {
+  width: 50px;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* Summary */
+.summary {
+  background-color: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.summaryRow.total {
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+/* Age Verification */
+.ageVerification {
+  margin-bottom: 2rem;
+}
+
+.ageVerification h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.checkbox input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #fff;
+}
+
+.checkbox span {
+  font-size: 0.95rem;
+}
+
+/* Shipping Options */
+.shippingOptions {
+  margin-bottom: 2rem;
+}
+
+.shippingOptions h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+.radioOption {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid #333;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.radioOption input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #fff;
+  flex-shrink: 0;
+}
+
+.radioContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.shippingTitle {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.shippingDetails {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+/* Checkout Button */
+.checkoutButton {
+  width: 100%;
+  padding: 1rem;
+  background-color: #1a3a52;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkoutButton:hover:not(:disabled) {
+  background-color: #0d2438;
+}
+
+.checkoutButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
