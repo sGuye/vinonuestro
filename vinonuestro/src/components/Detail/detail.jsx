@@ -27,9 +27,9 @@ function Detail() {
       </div>
 
       <div className={styles.wineInfo}>
-        <h1>{wineData.name}</h1>
-        <h2>{wineData.winery}</h2>
-        <h3 className={styles.price}>{wineData.price}</h3>
+        <h2>{wineData.name}</h2>
+        <h3>{wineData.winery}</h3>
+        <p className={styles.price}>{wineData.price}</p>
 
         <section>
           <h4>Su historia</h4>
@@ -44,7 +44,7 @@ function Detail() {
             <div className={styles.characteristic}>
               <span>Cuerpo</span>
               <div className={styles.dots}>
-                {[...Array(4)].map((_, i) => (
+                {[...Array(5)].map((_, i) => (
                   <span key={i} className={i < wineData.taste.body ? styles.activeDot : styles.dot}></span>
                 ))}
               </div>
@@ -53,7 +53,7 @@ function Detail() {
             <div className={styles.characteristic}>
               <span>Taninos</span>
               <div className={styles.dots}>
-                {[...Array(4)].map((_, i) => (
+                {[...Array(5)].map((_, i) => (
                   <span key={i} className={i < wineData.taste.tannins ? styles.activeDot : styles.dot}></span>
                 ))}
               </div>
@@ -68,7 +68,7 @@ function Detail() {
 
         <div className={styles.actions}>
           <button className={styles.buyButton}>Comprar ahora</button>
-          <button className={styles.favoriteButton}>♡</button>
+          <button className={styles.favoriteButton}><span class="material-symbols-rounded">favorite</span></button>
         </div>
       </div>
     </div>

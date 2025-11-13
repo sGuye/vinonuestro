@@ -24,6 +24,7 @@ function Banner() {
         </p>
         <button onClick={handleClick} className={styles.bannerButton}>
           Descubrir vino para mí
+          <span class="material-symbols-rounded">magic_button</span>
         </button>
       </div>
     </>
