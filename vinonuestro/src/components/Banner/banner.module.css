@@ -26,7 +26,10 @@
 }
 
 .bannerButton {
-  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
   padding: 0.8rem;
   margin-top: 1rem;
   cursor: pointer;
@@ -39,4 +42,46 @@
 
 .bannerButton:hover{
   background-color:var(--black);
+}
+
+.bannerButton span{
+  margin-left: .4rem;
+}
+
+/*---------BANNER MOBILE---------*/
+
+@media (max-width: 1000px){
+.banner {
+  padding: 6rem 1.5rem 4rem;
+}
+
+.bannerTitle {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.bannerSubtitle {
+  font-size: 2rem;
+  font-weight: 200;
+  margin: 2.5rem 0 .5rem 0;
+}
+
+.bannerText {
+  margin: 1rem;
+  font-size: 1.2rem ;
+  font-weight: 100;
+}
+
+.bannerButton {
+  font-size: 1rem;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  width: 16rem;
+  border-radius: .5rem;
+}
+
+.bannerButton span{
+  margin-left: .4rem;
+}
+
 }

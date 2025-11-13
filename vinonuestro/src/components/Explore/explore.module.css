@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  padding: 4rem 6rem 5rem;
+  margin: 4rem 6rem 5rem;
 }
 
 .exploreTitle {
@@ -139,4 +139,149 @@
   justify-content: flex-start;
   width: 100%;
   gap: 1.5rem;
+}
+
+/*---------EXPLORE MOBILE---------*/
+
+@media (max-width: 1000px) {
+  .explore {
+    margin: 4rem 1.5rem 5rem;
+  }
+
+  .exploreTitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .exploreNav {
+    width: 100%;
+  }
+
+  .form {
+    flex: 1;
+  }
+
+  .exploreSearchForm {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--lightgrey);
+    border-radius: 0.3rem;
+    width: 20rem;
+  }
+
+  .exploreSearchForm:focus-within {
+    border: 1px solid var(--darkgrey);
+  }
+
+  .exploreSearchForm input {
+    padding: 0.45rem 1rem;
+    border-radius: 0.9rem 0 0 0.9rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    height: 2rem;
+    border: 10px;
+    width: 20rem;
+  }
+
+  .exploreSearchForm button {
+    padding: 0 0.7rem 0 0.3rem;
+    border-radius: 0 0.9rem 0.9rem 0;
+    border: none;
+    background: var(--white);
+    color: var(--lightgrey);
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+  }
+
+  .exploreSearchForm button:hover {
+    color: var(--darkgrey);
+  }
+
+  .searchClearBtn {
+    background: transparent;
+    border: none;
+    color: var(--lightgrey);
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: -2.2rem;
+    z-index: 2;
+    outline: none;
+    position: relative;
+  }
+
+  .searchClearBtn:hover {
+    color: var(--darkgrey);
+  }
+
+  .exploreSearchbar button {
+    padding: 0 0.7rem 0 0.3rem;
+    border-radius: 0 0.9rem 0.9rem 0;
+    border: none;
+    background: var(--white);
+    color: var(--lightgrey);
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.9rem;
+  }
+
+  .categories {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 2rem 0 .5rem 0;
+    height: 5.5rem;
+  }
+
+  .category a {
+    font-size: .9rem;
+    color:var(--black);
+    padding: 0.5rem 0.8rem;
+    background-color: var(--white);
+    border: 1px solid var(--lightgrey);
+    border-radius: 1.1rem;
+  }
+
+  .category a:hover {
+    background-color: var(--border);
+  }
+
+  .filters {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .filter {
+    flex: 1;
+  }
+
+  .filter select {
+    padding: 0.5rem;
+    border: 1px solid var(--lightgrey);
+    border-radius: 0.5rem;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  /*---------CARDS---------*/
+
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 1.5rem;
+  }
 }

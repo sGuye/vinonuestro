@@ -21,3 +21,24 @@
   gap: 2rem;
   margin-top: .5rem;
 }
+
+/*---------FOR YOU MOBILE---------*/
+
+@media (max-width: 1000px) {
+
+  .forYou {
+  margin: 6rem 1rem;
+  gap: 1.5rem;
+}
+
+.forYouTitle {
+
+  font-size: 2rem;
+}
+
+.cardContainer{
+  width: 100%;
+  gap: 2rem;
+  margin-top: .5rem;
+}
+}

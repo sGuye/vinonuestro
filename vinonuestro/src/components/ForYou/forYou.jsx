@@ -13,7 +13,7 @@ function ForYou() {
 
   return (
     <div className={styles.forYou}>
-      <h2 className={styles.forYouTitle}>Vinos perfectos para ti</h2>
+      <h2 className={styles.forYouTitle}>Selección perfecta para vos:</h2>
       <div className={styles.cardContainer}>
         <Card />
         <Card />
