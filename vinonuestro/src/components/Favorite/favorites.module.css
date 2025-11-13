@@ -1,0 +1,193 @@
+.favoriteContainer {
+  background-color: #111;
+  color: #fff;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+.profileIcon {
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.section {
+  background-color: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  margin: 0 0 1.5rem 0;
+  font-weight: 500;
+}
+
+.icon {
+  font-size: 1.3rem;
+}
+
+/* Mis favoritos */
+.favoritesList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.favoriteItem {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.wineImage {
+  width: 70px;
+  height: 100px;
+  background-color: #333;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.wineInfo {
+  flex: 1;
+}
+
+.wineName {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.winePrice {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Historial de compras */
+.purchaseList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.purchaseItem {
+  border-bottom: 1px solid #333;
+  padding-bottom: 1rem;
+}
+
+.purchaseItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.purchaseNumber {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.purchaseDate {
+  margin: 0.25rem 0;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.purchaseStatus {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.85rem;
+  color: #4a9eff;
+}
+
+/* Recomendaciones */
+.recommendationsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.recommendationItem {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.recImage {
+  width: 70px;
+  height: 100px;
+  background-color: #333;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.recInfo {
+  flex: 1;
+}
+
+.recName {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.recDescription {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.viewAllButton {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.viewAllButton:hover {
+  color: #4a9eff;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}

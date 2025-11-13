@@ -6,6 +6,7 @@ import Home from "./components/Home/home";
 import AboutYou from "./components/AboutYou/aboutYou";
 import ForYou from "./components/ForYou/forYou";
 import Detail from "./components/Detail/detail";
+import Favorites from "./components/Favorite/favorites";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,6 +19,7 @@ function App() {
          <Route exact path="/Aboutyou" element={<AboutYou />} />
          <Route exact path="/detail" element={<Detail />} />
          <Route exact path="/foryou" element={<ForYou />} />
+         <Route exact path="/favorites" element={<Favorites />} />
       </Routes>
     </div>
   );
