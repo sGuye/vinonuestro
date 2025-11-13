@@ -1,40 +1,26 @@
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import './forYou.module.css'
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Card from "../Card/card";
+import styles from "./forYou.module.css";
 
 function ForYou() {
-  const [count, setCount] = useState(0)
-  const navigate = useNavigate()
+  const [count, setCount] = useState(0);
+  const navigate = useNavigate();
 
   const handleViewDetail = () => {
-    navigate('/detail')
-  }
+    navigate("/detail");
+  };
 
   return (
-    <div>
-      <h1>Vinos perfectos parra ti</h1>
-      <li>
-        <ul>
-          <img src='' alt='icono de vino'/>
-          <h2>Malbec Reserva 2021</h2>
-          <p>Un vino robusto con notas de frutas rojas y especias.</p>
-          <button onClick={handleViewDetail}>Ver ficha completa</button>
-        </ul>
-        <ul>
-          <img src='' alt='icono de vino'/>
-          <h2>Chardonnay Premium 2020</h2>
-          <p>Un vino blanco fresco con aromas cítricos y toques de vainilla.</p>
-          <button onClick={handleViewDetail}>Ver ficha completa</button>
-        </ul>
-        <ul>
-          <img src='' alt='icono de vino'/>
-          <h2>Rosé Delight 2022</h2>
-          <p>Un vino rosado ligero y afrutado, perfecto para el verano.</p>
-          <button onClick={handleViewDetail}>Ver ficha completa</button>
-        </ul>
-      </li>
+    <div className={styles.forYou}>
+      <h2 className={styles.forYouTitle}>Vinos perfectos para ti</h2>
+      <div className={styles.cardContainer}>
+        <Card />
+        <Card />
+        <Card />
+      </div>
     </div>
-  )
+  );
 }
 
-export default ForYou
+export default ForYou;

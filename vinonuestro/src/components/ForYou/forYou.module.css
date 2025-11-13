@@ -1,0 +1,23 @@
+.forYou {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6rem;
+  gap: 1.5rem;
+}
+
+.forYouTitle {
+  display: flex;
+  font-size: 2rem;
+}
+
+.cardContainer{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: .5rem;
+}

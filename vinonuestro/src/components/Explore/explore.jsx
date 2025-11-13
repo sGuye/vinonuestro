@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Searchbar from "../Searchbar/searchbar";
+import Card from "../Card/card";
 import styles from "./explore.module.css";
 
 function Explore() {
@@ -11,7 +12,6 @@ function Explore() {
         <h2 className={styles.exploreTitle}>Explorar catálogo</h2>
 
         <nav className={styles.exploreNav}>
-
           <form className={styles.exploreSearchForm} role="search">
             <input
               type="search"
@@ -85,28 +85,18 @@ function Explore() {
               </select>
             </div>
           </div>
-        </nav>
+       
 
-        {/* <div>
-          <h3>Featured Wines</h3>
-          <ul>
-            <li>Chateau Margaux 2015 - $999 - 4.9 Stars</li>
-            <li>Dom Pérignon 2010 - $199 - 4.8 Stars</li>
-            <li>Screaming Eagle Cabernet 2016 - $2999 - 5.0 Stars</li>
-            <li>Cloudy Bay Sauvignon Blanc 2020 - $30 - 4.5 Stars</li>
-            <li>Whispering Angel Rosé 2021 - $25 - 4.6 Stars</li>
-            <li>Chateau Margaux 2015 - $999 - 4.9 Stars</li>
-            <li>Dom Pérignon 2010 - $199 - 4.8 Stars</li>
-            <li>Screaming Eagle Cabernet 2016 - $2999 - 5.0 Stars</li>
-            <li>Cloudy Bay Sauvignon Blanc 2020 - $30 - 4.5 Stars</li>
-            <li>Whispering Angel Rosé 2021 - $25 - 4.6 Stars</li>
-            <li>Chateau Margaux 2015 - $999 - 4.9 Stars</li>
-            <li>Dom Pérignon 2010 - $199 - 4.8 Stars</li>
-            <li>Screaming Eagle Cabernet 2016 - $2999 - 5.0 Stars</li>
-            <li>Cloudy Bay Sauvignon Blanc 2020 - $30 - 4.5 Stars</li>
-            <li>Whispering Angel Rosé 2021 - $25 - 4.6 Stars</li>
-          </ul>
-        </div> */}
+        <div className={styles.cardContainer}>
+          
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </div>
+         </nav>
       </div>
     </>
   );

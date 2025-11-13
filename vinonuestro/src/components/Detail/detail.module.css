@@ -2,8 +2,6 @@
   display: flex;
   gap: 2rem;
   padding: 2rem;
-  background-color: #111;
-  color: #fff;
 }
 
 .mainImage {
@@ -45,7 +43,6 @@ section {
 }
 
 section h4 {
-  color: #999;
   margin-bottom: 0.5rem;
 }
 
@@ -72,11 +69,11 @@ section h4 {
 }
 
 .dot {
-  background-color: #333;
+  background-color: #1c48cf;
 }
 
 .activeDot {
-  background-color: #fff;
+  background-color: #ba4141;
 }
 
 .actions {
@@ -88,8 +85,8 @@ section h4 {
 .buyButton {
   flex: 1;
   padding: 1rem;
-  background-color: #fff;
-  color: #111;
+
+
   border: none;
   border-radius: 4px;
   font-weight: bold;
@@ -98,9 +95,8 @@ section h4 {
 
 .favoriteButton {
   padding: 1rem;
-  background-color: transparent;
-  border: 1px solid #fff;
-  color: #fff;
+
+
   border-radius: 4px;
   cursor: pointer;
 }

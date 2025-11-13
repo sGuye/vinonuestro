@@ -14,9 +14,17 @@ function Banner() {
     <>
       <div className={styles.banner}>
         <h1 className={styles.bannerTitle}>Vino Nuestro</h1>
-        <h2 className={styles.bannerSubtitle}>Cada vino cuenta una historia...</h2>
-        <p className={styles.bannerText}>Descubre vinos únicos con narrativas auténticas. <br /> Desde pequeñas bodegas familiares hasta grandes reservas, <br />cada botella tiene algo especial que contar.</p>
-        <button onClick={handleClick} className={styles.bannerButton}>Descubrir vino para mi</button>
+        <h2 className={styles.bannerSubtitle}>
+          Cada vino cuenta una historia...
+        </h2>
+        <p className={styles.bannerText}>
+          Descubre vinos únicos con narrativas auténticas. <br /> Desde pequeñas
+          bodegas familiares hasta grandes reservas, <br />
+          cada botella tiene algo especial que contar.
+        </p>
+        <button onClick={handleClick} className={styles.bannerButton}>
+          Descubrir vino para mí
+        </button>
       </div>
     </>
   );

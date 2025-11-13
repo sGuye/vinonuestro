@@ -1,0 +1,56 @@
+.abaoutYou {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6rem;
+  gap: 1.5rem;
+}
+
+.abaoutYouTitle {
+  display: flex;
+  font-size: 2rem;
+}
+
+.abaoutYouSubtitle {
+  display: flex;
+  padding-bottom: 0.5rem;
+}
+
+.filters {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 30%;
+}
+
+.filter {
+  flex: 1;
+}
+
+.filter select {
+  padding: 0.5rem;
+  border: 1px solid var(--lightgrey);
+  border-radius: 0.3rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+.abaoutYouButton {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 0.7rem;
+  cursor: pointer;
+  width: 30%;
+  background-color: var(--grey);
+  border: none;
+  border-radius: 0.35rem;
+  color: var(--white);
+}
+
+.abaoutYouButton:hover {
+  background-color: var(--black);
+}

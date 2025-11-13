@@ -19,7 +19,11 @@ function Detail() {
   return (
     <div className={styles.detailContainer}>
       <div className={styles.mainImage}>
-        <img src="/path-to-wine-image.jpg" alt="Malbec Reserva 2021" />
+        <img
+          className={styles.cardImg}
+          src="../../src/assets/vinonuestrocard.jpg"
+          alt="Logo de Vino Nuestro"
+        />
       </div>
 
       <div className={styles.wineInfo}>
