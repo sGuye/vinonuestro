@@ -1,62 +1,71 @@
 .checkoutContainer {
-    display: flex;
-    flex-direction: column;
-  background-color: #111;
-  color: #fff;
-  min-height: 100vh;
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
+  display: flex;
+  text-align: start;
+  flex-direction: column;
+  margin: 2.5rem auto 5.5rem;
+
 }
 
 .title {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   font-size: 1.8rem;
   margin: 0 0 2rem 0;
-  font-weight: 400;
+}
+
+.title span {
+  font-size: 1.8rem;
+  margin-right: 0.4rem;
 }
 
 /* Cart Item */
 .cartItem {
   display: flex;
-  gap: 1.5rem;
+  flex-direction: row;
   align-items: center;
-  border: 1px solid #333;
-  padding: 1.5rem;
+  justify-items: left;
+  gap: 1.5rem;
+  border: 1px solid var(--border);
+  background-color: var(--white);
+  padding: 1rem;
   border-radius: 8px;
   margin-bottom: 2rem;
 }
 
 .wineImage {
-  width: 80px;
-  height: 120px;
-  background-color: #333;
-  border-radius: 4px;
+  width: 6rem;
+  height: 7rem;
+  border-radius: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  font-size: 0.9rem;
-  color: #888;
+}
+
+.wineDetailsContainer{
+  display: flex;
+  flex-direction: row;
 }
 
 .wineDetails {
+  align-items: center;
+  justify-items: left;
   flex: 1;
 }
 
 .wineName {
-  margin: 0;
   font-size: 1.1rem;
   font-weight: 500;
 }
 
 .winery {
-  margin: 0.25rem 0;
-  color: #888;
+  margin: 0.7rem 0;
   font-size: 0.9rem;
 }
 
 .price {
-  margin: 0.5rem 0 0 0;
+  margin: 0.6rem 0 0 0;
   font-size: 1.2rem;
   font-weight: 600;
 }
@@ -64,16 +73,14 @@
 .quantityControl {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  border: 1px solid #333;
-  border-radius: 4px;
-  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-left: 2.5rem;
 }
 
 .quantityControl button {
   background-color: transparent;
-  border: none;
-  color: #fff;
+  border: 1px solid var(--border);
+  border-radius: 0.2rem;
   cursor: pointer;
   font-size: 1.2rem;
   width: 30px;
@@ -83,9 +90,9 @@
   justify-content: center;
 }
 
-.quantityControl button:hover {
-  background-color: #333;
-  border-radius: 4px;
+.quantityControl button:hover,
+.quantityControl button:active {
+  background-color: var(--lightgrey);
 }
 
 .quantityControl input {
@@ -93,16 +100,16 @@
   text-align: center;
   background-color: transparent;
   border: none;
-  color: #fff;
   font-size: 1rem;
 }
 
 /* Summary */
 .summary {
-  background-color: #1a1a1a;
   padding: 1.5rem;
   border-radius: 8px;
   margin-bottom: 2rem;
+  background-color: var(--lightgrey);
+
 }
 
 .summaryRow {
@@ -118,6 +125,51 @@
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0;
+}
+
+
+/* Shipping Options */
+.shippingOptions {
+  margin-bottom: 2rem;
+}
+
+.shippingOptions h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+.radioOption {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  background-color:var(--white);
+}
+
+.radioOption input {
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+}
+
+.radioContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.shippingTitle {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.shippingDetails {
+  font-size: 0.85rem;
 }
 
 /* Age Verification */
@@ -138,15 +190,174 @@
 }
 
 .checkbox input {
-  width: 20px;
-  height: 20px;
+  width: 1.2rem;
+  height: 1.2rem;
   cursor: pointer;
-  accent-color: #fff;
 }
 
 .checkbox span {
   font-size: 0.95rem;
 }
+
+
+/* Checkout Button */
+.checkoutButton {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 4rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.35rem;
+  background-color: var(--grey);
+  color: var(--white);
+  transition: background-color 0.25s ease;
+}
+
+.checkoutButton:hover{
+  background-color: var(--black);
+}
+
+.checkoutButton:hover:not(:disabled) {
+background-color: var(--black);
+}
+
+.checkoutButton:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+
+}
+
+@media (max-width: 500px) {
+.checkoutContainer {
+  display: flex;
+  text-align: start;
+  flex-direction: column;
+  margin: 2rem 1rem 5.5rem;
+
+}
+
+.title {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 0 2rem 0;
+}
+
+.title span {
+  font-size: 1.8rem;
+  margin-right: 0.4rem;
+}
+
+/* Cart Item */
+.cartItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: left;
+  gap: 1.5rem;
+  border: 1px solid var(--border);
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.wineImage {
+  width: 6rem;
+  height: 8rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wineDetailsContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.wineDetails {
+  align-items: center;
+  justify-items: left;
+  flex: 1;
+}
+
+.wineName {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.winery {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.price {
+  margin: .2rem 0 0 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.quantityControl {
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  margin: .9rem 0 0 0;
+}
+
+.quantityControl button {
+  background-color: transparent;
+  border: 1px solid var(--border);
+  border-radius: 0.2rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantityControl button:hover,
+.quantityControl button:active {
+  background-color: var(--lightgrey);
+}
+
+.quantityControl input {
+  width: 50px;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+}
+
+/* Summary */
+.summary {
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  background-color: var(--lightgrey);
+ 
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.summaryRow.total {
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
 
 /* Shipping Options */
 .shippingOptions {
@@ -162,18 +373,18 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  border: 1px solid #333;
+  border: 1px solid var(--border);
   padding: 1rem;
   border-radius: 8px;
   cursor: pointer;
   margin-bottom: 1rem;
+  background-color:var(--white);
 }
 
 .radioOption input {
-  width: 20px;
-  height: 20px;
+
   cursor: pointer;
-  accent-color: #fff;
+
   flex-shrink: 0;
 }
 
@@ -189,29 +400,63 @@
 }
 
 .shippingDetails {
-  color: #888;
   font-size: 0.85rem;
 }
+
+/* Age Verification */
+.ageVerification {
+  margin-bottom: 2rem;
+}
+
+.ageVerification h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.checkbox input {
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+}
+
+.checkbox span {
+  font-size: 0.95rem;
+}
+
 
 /* Checkout Button */
 .checkoutButton {
   width: 100%;
   padding: 1rem;
-  background-color: #1a3a52;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
+  border-radius: 4rem;
   font-size: 1rem;
-  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  border: none;
+  border-radius: 0.35rem;
+  background-color: var(--grey);
+  color: var(--white);
+  transition: background-color 0.25s ease;
+}
+
+.checkoutButton:hover{
+  background-color: var(--black);
 }
 
 .checkoutButton:hover:not(:disabled) {
-  background-color: #0d2438;
+background-color: var(--black);
 }
 
 .checkoutButton:disabled {
-  opacity: 0.5;
+  opacity: 0.8;
   cursor: not-allowed;
+
+}
+
 }

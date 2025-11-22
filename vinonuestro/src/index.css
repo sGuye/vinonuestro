@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  font-weight: 500;
   cursor: default;
   text-align: center;
   background-color: var(--bg);
@@ -13,22 +12,30 @@
 
 * {
   font-family: "Fira Sans", "Montserrat", "Poppins", sans-serif;
-  /* background-color: var(--bg); */
-  /* scrollbar-color: #999 #141414; */
   text-decoration: none;
   list-style: none;
+  --white: #fff;
+  --bg: #fcfcfc;
+  --border: #dcdcdc;
   --lightgrey: #dbdbdb;
   --grey: #252525;
   --darkgrey: #141414;
-  --white: #fff;
   --black: #000;
-  --bg: #fcfcfc;
-  --whover: #f3f3f3;
-  --border: #dcdcdc;
   --xd: #f57017;
 }
 
-body, html, ul, li, h1, h2, h3, h4, h5, p, a, span{
+body,
+html,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+span {
   margin: 0;
   padding: 0;
 }

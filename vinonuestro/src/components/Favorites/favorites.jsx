@@ -34,54 +34,45 @@ function Favorites() {
   const visibleFavorites = favorites.slice(0, visibleCount);
 
   return (
-    <div className={styles.card}>
-      <div className={styles.header}>
-        <span className={styles.heart}>♡</span>
-        <h3 className={styles.title}>Mis favoritos</h3>
-      </div>
+    <div className={styles.favorites}>
+      <h1 className={styles.title}>
+        <span class="material-symbols-rounded">favorite</span>Favoritos
+      </h1>
 
-      <div className={styles.list}>
+    
         {visibleFavorites.map((wine) => (
           <div key={wine.id} className={styles.item}>
-            <div className={styles.left}>
-              <div className={styles.thumb} aria-hidden>
-                {/* placeholder imagen */}
-              </div>
+            <img
+              className={styles.wineImage}
+              src="../../src/assets/vinonuestrocard.jpg"
+              alt="Logo de Vino Nuestro"
+            />
+            <div className={styles.infoContainer}>
               <div className={styles.info}>
                 <div className={styles.name}>{wine.name}</div>
                 <div className={styles.price}>{wine.price}</div>
               </div>
-            </div>
 
-            <div className={styles.actions}>
-              <button
-                className={styles.addBtn}
-                onClick={() => addToCart(wine)}
-                aria-label={`Agregar ${wine.name} al carrito`}
-              >
-                Añadir
-              </button>
-              <button
-                className={styles.deleteBtn}
-                onClick={() => removeFavorite(wine.id)}
-                aria-label={`Eliminar ${wine.name} de favoritos`}
-              >
-                🗑
-              </button>
+              <div className={styles.actions}>
+                <button
+                  className={styles.addBtn}
+                  onClick={() => addToCart(wine)}
+                  aria-label={`Agregar ${wine.name} al carrito`}
+                >
+                  Añadir a la cesta
+                </button>
+                <button
+                  className={styles.deleteBtn}
+                  onClick={() => removeFavorite(wine.id)}
+                  aria-label={`Eliminar ${wine.name} de favoritos`}
+                >
+                  <span class="material-symbols-rounded">delete</span>
+                </button>
+              </div>
             </div>
           </div>
         ))}
-      </div>
-
-      {favorites.length > visibleCount ? (
-        <button className={styles.viewMore} onClick={handleVerMas}>
-          Ver más
-        </button>
-      ) : favorites.length > 10 ? (
-        <button className={styles.viewMore} onClick={handleVerMenos}>
-          Ver menos
-        </button>
-      ) : null}
+ 
     </div>
   );
 }

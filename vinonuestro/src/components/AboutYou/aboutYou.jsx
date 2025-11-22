@@ -13,7 +13,7 @@ function AboutYou() {
   return (
     <>
       <div className={styles.abaoutYou}>
-        <h2 className={styles.abaoutYouTitle}>Contanos sobre vos:</h2>
+        <h1 className={styles.abaoutYouTitle}>  <span class="material-symbols-rounded">magic_button</span>Contanos sobre vos:</h1>
         <div className={styles.filters}>
           <div className={styles.filter}>
             <h3 className={styles.abaoutYouSubtitle}>

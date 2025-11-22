@@ -72,7 +72,7 @@ function Header() {
                 className={styles.headerNavItem}
                 aria-label="Carrito"
               >
-                <span class="material-symbols-rounded">shopping_cart</span>
+                <span class="material-symbols-rounded">shopping_bag</span>
               </NavLink>
 
               <NavLink
@@ -125,7 +125,7 @@ function Header() {
                 className={styles.headerNavItem}
                 aria-label="Carrito"
               >
-                <span class="material-symbols-rounded">shopping_cart</span>
+                <span class="material-symbols-rounded">shopping_bag</span>
               </NavLink>
             </ul>
           </nav>

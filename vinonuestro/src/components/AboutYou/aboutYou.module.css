@@ -3,13 +3,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 6rem;
+  margin-top: 3.5rem;
   gap: 1.5rem;
 }
 
 .abaoutYouTitle {
   display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 2rem;
+  gap: 0.3rem;
+}
+
+.abaoutYouTitle span {
+  font-size: 1.8rem;
 }
 
 .abaoutYouSubtitle {
@@ -31,7 +38,7 @@
 
 .filter select {
   padding: 0.5rem;
-  border: 1px solid var(--lightgrey);
+  border: 1px solid var(--border);
   border-radius: 0.3rem;
   width: 100%;
   cursor: pointer;
@@ -58,14 +65,13 @@
 /*---------ABOUT YOU MOBILE---------*/
 
 @media (max-width: 1000px) {
-
   .abaoutYou {
-    margin-top: 6rem;
+    margin-top: 2.5rem;
     gap: 1.5rem;
   }
 
   .abaoutYouTitle {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .abaoutYouSubtitle {

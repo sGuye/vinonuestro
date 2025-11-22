@@ -1,38 +1,41 @@
-import { useState } from 'react'
-import styles from './checkout.module.css'
+import { useState } from "react";
+import styles from "./checkout.module.css";
 
 function Checkout() {
-  const [quantity, setQuantity] = useState(1)
-  const [ageVerified, setAgeVerified] = useState(false)
-  const [shippingOption, setShippingOption] = useState('standard')
+  const [quantity, setQuantity] = useState(1);
+  const [ageVerified, setAgeVerified] = useState(false);
+  const [shippingOption, setShippingOption] = useState("standard");
 
   const wine = {
-    name: 'Malbec Reserva 2021',
-    winery: 'Bodega Familia Mendoza',
+    name: "Malbec Reserva 2021",
+    winery: "Bodega Familia Mendoza",
     price: 850,
-    image: '/path-to-wine-image.jpg'
-  }
+    image: "/path-to-wine-image.jpg",
+  };
 
-  const shippingCost = shippingOption === 'standard' ? 150 : 300
-  const subtotal = wine.price * quantity
-  const total = subtotal + shippingCost
+  const shippingCost = shippingOption === "standard" ? 150 : 300;
+  const subtotal = wine.price * quantity;
+  const total = subtotal + shippingCost;
 
   const handleQuantityChange = (change) => {
-    const newQuantity = quantity + change
+    const newQuantity = quantity + change;
     if (newQuantity > 0) {
-      setQuantity(newQuantity)
+      setQuantity(newQuantity);
     }
-  }
+  };
 
   return (
     <div className={styles.checkoutContainer}>
-      <h1 className={styles.title}>Carrito de compras</h1>
+      <h1 className={styles.title}><span class="material-symbols-rounded">shopping_bag</span>Carrito de compras</h1>
 
       {/* Wine Item */}
       <div className={styles.cartItem}>
-        <div className={styles.wineImage}>
-          <span>Vino</span>
-        </div>
+        <img
+          className={styles.wineImage}
+          src="../../src/assets/vinonuestrocard.jpg"
+          alt="Logo de Vino Nuestro"
+        />
+<div className={styles.wineDetailsContainer}>
         <div className={styles.wineDetails}>
           <h2 className={styles.wineName}>{wine.name}</h2>
           <p className={styles.winery}>{wine.winery}</p>
@@ -42,6 +45,7 @@ function Checkout() {
           <button onClick={() => handleQuantityChange(-1)}>−</button>
           <input type="text" value={quantity} readOnly />
           <button onClick={() => handleQuantityChange(1)}>+</button>
+        </div>
         </div>
       </div>
 
@@ -55,13 +59,49 @@ function Checkout() {
           <span>Envío</span>
           <span>${shippingCost}</span>
         </div>
-        <div className={styles.summaryRow + ' ' + styles.total}>
+        <div className={styles.summaryRow + " " + styles.total}>
           <span>Total</span>
           <span>${total}</span>
         </div>
       </div>
 
-      {/* Age Verification */}
+      
+
+      {/* Shipping Options */}
+      <div className={styles.shippingOptions}>
+        <h3>Opciones de envío</h3>
+        <label className={styles.radioOption}>
+          <input
+            type="radio"
+            value="standard"
+            checked={shippingOption === "standard"}
+            onChange={(e) => setShippingOption(e.target.value)}
+          />
+          <div className={styles.radioContent}>
+            <span className={styles.shippingTitle}>Envío estándar</span>
+            <span className={styles.shippingDetails}>
+              3-5 días hábiles - $150
+            </span>
+          </div>
+        </label>
+
+        <label className={styles.radioOption}>
+          <input
+            type="radio"
+            value="express"
+            checked={shippingOption === "express"}
+            onChange={(e) => setShippingOption(e.target.value)}
+          />
+          <div className={styles.radioContent}>
+            <span className={styles.shippingTitle}>Envío express</span>
+            <span className={styles.shippingDetails}>
+              1-2 días hábiles - $300
+            </span>
+          </div>
+        </label>
+      </div>
+
+{/* Age Verification */}
       <div className={styles.ageVerification}>
         <h3>Verificación de edad</h3>
         <label className={styles.checkbox}>
@@ -74,45 +114,12 @@ function Checkout() {
         </label>
       </div>
 
-      {/* Shipping Options */}
-      <div className={styles.shippingOptions}>
-        <h3>Opciones de envío</h3>
-        <label className={styles.radioOption}>
-          <input
-            type="radio"
-            value="standard"
-            checked={shippingOption === 'standard'}
-            onChange={(e) => setShippingOption(e.target.value)}
-          />
-          <div className={styles.radioContent}>
-            <span className={styles.shippingTitle}>Envío estándar</span>
-            <span className={styles.shippingDetails}>3-5 días hábiles - $150</span>
-          </div>
-        </label>
-
-        <label className={styles.radioOption}>
-          <input
-            type="radio"
-            value="express"
-            checked={shippingOption === 'express'}
-            onChange={(e) => setShippingOption(e.target.value)}
-          />
-          <div className={styles.radioContent}>
-            <span className={styles.shippingTitle}>Envío express</span>
-            <span className={styles.shippingDetails}>1-2 días hábiles - $300</span>
-          </div>
-        </label>
-      </div>
-
       {/* Checkout Button */}
-      <button
-        className={styles.checkoutButton}
-        disabled={!ageVerified}
-      >
+      <button className={styles.checkoutButton} disabled={!ageVerified}>
         Proceder al pago
       </button>
     </div>
-  )
+  );
 }
 
-export default Checkout
+export default Checkout;

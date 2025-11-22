@@ -2,10 +2,12 @@
   display: flex;
   flex-direction: column;
   background-color: var(--white);
-  border: 1px solid var(--lightgrey);
+  border: 1px solid var(--border);
   border-radius: 0.7rem;
   padding: 1rem 1rem 1.5rem 1rem;
-  width: 20rem;
+   /* crece, ocupa al menos 260px, se adapta */
+  max-width: 20rem;    /* nunca excede este ancho */
+
 }
 
 .cardImg {
@@ -32,7 +34,7 @@
 }
 
 .cardSubtitle {
-  font-size: .95rem;
+  font-size: 0.95rem;
   font-weight: 100;
   color: var(--grey);
 }
@@ -51,12 +53,16 @@
   padding: 0.7rem;
   cursor: pointer;
   width: 100%;
-  background-color: var(--grey);
   border: none;
   border-radius: 0.35rem;
+  background-color: var(--grey);
   color: var(--white);
 }
 
 .cardButton:hover {
   background-color: var(--black);
+}
+
+@media (max-width: 1000px) {
+  
 }

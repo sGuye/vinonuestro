@@ -2,7 +2,7 @@
   display: flex;
   text-align: left;
   gap: 2rem;
-  padding: 6rem 6rem;
+  padding: 3rem 6rem;
 }
 
 .mainImage {
@@ -14,7 +14,7 @@
   width: 100%;
   height: auto;
   border-radius: 8px;
-    border: 1px solid var(--lightgrey);
+    border: 1px solid var(--border);
 }
 
 .wineInfo {
@@ -119,5 +119,126 @@ padding-bottom: .8rem;
 .favoriteButton:focus,
 .favoriteButton:active {
   font-variation-settings: "FILL" 1;
-  color: rgb(238, 49, 49);
+  color: var(--grey);
+}
+
+@media (max-width: 1000px){
+  .detailContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 1.5rem;
+  padding: 2rem 1rem 5rem;
+}
+
+.mainImage {
+  flex: 1;
+  max-width: 100%;
+}
+
+.mainImage img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.wineInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 1rem;
+}
+
+.wineInfo h2 {
+  font-size: 2.5rem;
+}
+
+.wineInfo h3 {
+  font-size: 1.5rem;
+  color: var(--grey);
+}
+
+.price {
+  font-size: 2rem;
+}
+
+section {
+
+}
+
+section h4 {
+padding: .8rem 0;
+}
+
+section p{
+padding-bottom: .8rem;
+}
+
+.characteristics {
+padding-bottom: .8rem;
+}
+
+.characteristic {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.dots {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.dot,
+.activeDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot {
+  background-color: var(--lightgrey);
+}
+
+.activeDot {
+  background-color: var(--grey);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.buyButton {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--grey);
+  border: none;
+  border-radius: 0.35rem;
+  color: var(--white);
+}
+
+.buyButton:hover {
+  background-color: var(--black);
+}
+
+.favoriteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: var(--white);
+  border: 1px solid var(--grey);
+  border-radius: 0.4rem;
+}
+
 }
