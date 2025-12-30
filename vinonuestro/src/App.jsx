@@ -10,6 +10,8 @@ import Favorites from "./components/Favorites/favorites";
 import Checkout from "./components/CheckOut/checkout";
 import Profile from "./components/Profile/profile";
 import Footer from "./components/Footer/Footer";
+import Dashboard from "./components/Dashboard/dashboard";
+import CreateProduct from "./components/CreateProduct/createproduct";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -25,6 +27,8 @@ function App() {
          <Route exact path="/profile" element={<Profile />} />
          <Route exact path="/checkout" element={<Checkout />} />
          <Route exact path="/favorites" element={<Favorites />} />
+         <Route exact path="/dashboard" element={<Dashboard />} />
+         <Route exact path="/createproduct" element={<CreateProduct />} />
       </Routes>
       <Footer />
     </div>

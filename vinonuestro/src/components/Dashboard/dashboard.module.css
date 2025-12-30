@@ -1,0 +1,279 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.pageTitle {
+  font-size: 1.75rem;
+  margin: 0 0 2rem 0;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: #3b82f6;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.statValue {
+  font-size: 1.8rem;
+  color: #000;
+  font-weight: 700;
+}
+
+/* Table Card */
+.tableCard {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tableHeader h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #000;
+  font-weight: 600;
+}
+
+.newBtn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.newBtn:hover {
+  background: #222;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.table thead {
+  background: #f9fafb;
+}
+
+.table thead th {
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background 0.12s ease;
+}
+
+.table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.row td {
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: #111;
+}
+
+/* Product Cell */
+.productCell {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.thumb {
+  width: 48px;
+  height: 48px;
+  background: #d3d4d8;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.productName {
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 0.2rem;
+}
+
+.productWinery {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Center alignment */
+.center {
+  text-align: center;
+}
+
+/* Status badges */
+.badgeActive {
+  display: inline-block;
+  background: #d1fae5;
+  color: #065f46;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.badgeInactive {
+  display: inline-block;
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Action buttons */
+.iconBtn {
+  background: transparent;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  margin: 0 0.25rem;
+  transition: opacity 0.12s ease;
+}
+
+.iconBtn:hover {
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+
+  .pageTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .statCard {
+    padding: 1rem;
+  }
+
+  .tableHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .tableCard {
+    overflow-x: auto;
+  }
+
+  .table {
+    min-width: 600px;
+  }
+
+  .table thead th {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .row td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .productCell {
+    gap: 0.75rem;
+  }
+
+  .thumb {
+    width: 40px;
+    height: 40px;
+  }
+
+  .productName {
+    font-size: 0.9rem;
+  }
+
+  .productWinery {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .pageTitle {
+    font-size: 1.3rem;
+  }
+
+  .statValue {
+    font-size: 1.5rem;
+  }
+
+  .tableHeader h3 {
+    font-size: 1rem;
+  }
+
+  .newBtn {
+    padding: 0.45rem 1rem;
+    font-size: 0.9rem;
+  }
+}
